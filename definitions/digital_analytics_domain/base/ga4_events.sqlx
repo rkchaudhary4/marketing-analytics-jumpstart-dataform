@@ -158,6 +158,4 @@ SELECT
     privacy_info,
     _TABLE_SUFFIX as table_suffix
 FROM ${ref('events' + dataform.projectConfig.vars.ga4_export_table_suffix)}
-  -- Exclude extra day exports 
-  WHERE NOT STARTS_WITH(_TABLE_SUFFIX, "intraday")
 )
